@@ -46,9 +46,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       <!-- Hide video selection drop down until more videos are available -->
       <label style="visibility: hidden;">Choose a video</label>
       <select id="eqrtVideoSelect" style="visibility: hidden;">
-        <option value="https://d25a56pc18k0co.cloudfront.net/sloths_binaural_3840_180_3D-injected.mp4"
-          data-video-width=3840 data-video-height=1920 data-video-layout="stereo-left-right" data-video-angle=180 data-video-fps=30>
-          stereo-left-right 180 3840x1920 30fps
+        <option value="Lat-Long.mp4"
+          data-video-width=2880 data-video-height=1440 data-video-layout="mono" data-video-angle=360 data-video-fps=30>
+          mono 360 2880x1440 30fps
         </option>
       </select>
   </header>
@@ -181,9 +181,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         projLayer = xrGLFactory.createProjectionLayer({ space: refSpace, stencil: false });
         eqrtLayer = xrGLFactory.createEquirectLayer({
           space: refSpace,
-          viewPixelWidth: eqrtVideoWidth / (eqrtVideoLayout === "stereo-left-right" ? 2 : 1),
-          viewPixelHeight: eqrtVideoHeight / (eqrtVideoLayout === "stereo-top-bottom" ? 2 : 1),
-          layout: eqrtVideoLayout,
+          viewPixelWidth: eqrtVideoWidth,
+          viewPixelHeight: eqrtVideoHeight,
+          layout: "mono",
         });
 
         eqrtLayer.centralHorizontalAngle = Math.PI * eqrtVideoAngle / 180;
