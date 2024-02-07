@@ -44,7 +44,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			<p>
 				サポートするデバイス：
 				全部のVRゴーグル： Apple Vision Pro, Meta Quest 1, 2, 3, など
-
+			</p>
+			<p>
+				実はスマホもサポートされていますけど、一時的オフにした。
 			</p>
 			<!-- Hide video selection drop down until more videos are available -->
 			<label style="visibility: hidden;">Choose a video</label>
@@ -58,7 +60,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	</header>
 	<main style='text-align: center;'>
 	</main>
-	<script src="https://immersive-web.github.io/webxr-layers-polyfill/build/webxr-layers-polyfill.js"></script>
+	<!-- <script src="https://immersive-web.github.io/webxr-layers-polyfill/build/webxr-layers-polyfill.js"></script> -->
 	<script type="module">
 		import { WebXRButton } from '../js/util/webxr-button.js';
 		import { Scene, WebXRView } from '../js/render/scenes/scene.js';
@@ -71,7 +73,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		//import WebXRPolyfill from '../js/third-party/webxr-polyfill/build/webxr-polyfill.module.js';
 		//if (QueryArgs.getBool('usePolyfill', true)) {
 		//}
-		let layersPolyfill = new WebXRLayersPolyfill()
+		//let layersPolyfill = new WebXRLayersPolyfill()
 
 		// XR globals.
 		let xrButton = null;
